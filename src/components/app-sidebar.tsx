@@ -32,7 +32,7 @@ const items = [
 ];
 export const AppSidebar = () => {
   return (
-    <Sidebar variant="floating" collapsible="icon">
+    <Sidebar variant="inset" collapsible="icon">
       <SidebarHeader></SidebarHeader>
       <SidebarContent>
         <SidebarGroup>

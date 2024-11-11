@@ -14,6 +14,7 @@ export const CategoryItem = ({ category }: CategoryItemProps) => {
       >
         <category.icon className="w-5 h-5 mb-7" />
         <p>{category.title}</p>
+        <p className="text-sm text-slate-500">13 Items</p>
       </CardContent>
     </Card>
   );

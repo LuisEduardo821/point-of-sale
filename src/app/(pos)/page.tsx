@@ -1,5 +1,5 @@
 "use client";
-import { CategoryGrid } from "@/components";
+import { CategoryGrid, ProductsGrid, ProductsInOrder } from "@/components";
 import { Separator } from "@/components/ui/separator";
 import {
   CakeSlice,
@@ -84,17 +84,15 @@ const products = [
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-4 gap-2 min-h-full">
+    <div className="flex-col md:grid md:grid-cols-4 gap-2 min-h-full">
       <div className="col-span-3">
         <CategoryGrid categories={categories} />
         <Separator className="my-4" />
-        {products.map((product) => (
-          <span>{product.description}</span>
-        ))}
+        <ProductsGrid products={products} />
+        <Separator className="my-4" />
       </div>
-      <div className="cols-span-1 bg-white min-h-full rounded-sm border shadow-sm">
-        products in cart
-      </div>
+      {/* <div className="cols-span-1 bg-white">products in cart</div> */}
+      <ProductsInOrder />
     </div>
   );
 }
